@@ -1,5 +1,8 @@
-require("config.core")
-require("config.lazy")
+-- ============================================================
+--  init.lua  –  entry point
+--  Load order: options → keymaps → bootstrap lazy → plugins
+-- ============================================================
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+require("config.options")
+require("config.keymaps")
+require("config.lazy")   -- bootstraps lazy.nvim and loads plugins/

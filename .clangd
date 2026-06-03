@@ -1,0 +1,10 @@
+# .clangd  (place this at your project root or $HOME)
+# Tells clangd to use C++17 and suppress include warnings
+# that fire on bits/stdc++.h.
+CompileFlags:
+  Add:
+    - "-std=c++17"
+    - "-Wall"
+    - "-Wextra"
+  Remove:
+    - "-W*"   # suppress overly noisy warnings from bits/stdc++.h
